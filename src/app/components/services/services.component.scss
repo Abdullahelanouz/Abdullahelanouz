@@ -1,0 +1,407 @@
+.services-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23cbd5e1" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 20px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        border-radius: 2px;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .services-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease 0.2s;
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .services-category {
+    margin-bottom: 80px;
+
+    .category-header {
+      text-align: center;
+      margin-bottom: 50px;
+
+      .category-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+
+        i {
+          font-size: 2rem;
+          color: white;
+        }
+      }
+
+      .category-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 15px;
+      }
+
+      .category-description {
+        font-size: 1.1rem;
+        color: #64748b;
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+
+      i {
+        font-size: 1.5rem;
+        color: white;
+      }
+    }
+
+    .service-content {
+      .service-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 15px;
+      }
+
+      .service-description {
+        font-size: 1rem;
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .service-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          font-size: 0.95rem;
+          color: #475569;
+
+          i {
+            color: #10b981;
+            margin-left: 10px;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .service-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 10px;
+
+        .service-price,
+        .service-duration {
+          text-align: center;
+
+          .price-label,
+          .duration-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 5px;
+          }
+
+          .price-value,
+          .duration-value {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        i {
+          margin-left: 8px;
+        }
+
+        &.btn-primary {
+          background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+          color: white;
+          border: none;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  .services-cta {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-large {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border: none;
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        i {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+
+    .section-header {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    .services-category {
+      .category-header {
+        .category-title {
+          font-size: 1.5rem;
+        }
+
+        .category-description {
+          font-size: 1rem;
+        }
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .service-card {
+      padding: 30px 20px;
+
+      .service-content {
+        .service-details {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+
+    .services-cta {
+      padding: 40px 20px;
+
+      .cta-content {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    .section-header {
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .section-subtitle {
+        font-size: 0.95rem;
+      }
+    }
+
+    .service-card {
+      padding: 25px 15px;
+
+      .service-content {
+        .service-title {
+          font-size: 1.2rem;
+        }
+
+        .service-description {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

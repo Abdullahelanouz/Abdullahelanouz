@@ -1,0 +1,63 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdullahelanouz.netlify.app/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.angular/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
+
+# Allow important files and directories
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /20cee54e173141ccb6f3452f69ca2942.txt
+Allow: /blog/
+Allow: /services/
+Allow: /projects/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules for different bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+# IndexNow API Key for instant indexing
+# This file allows search engines to verify ownership and get instant indexing
+Allow: /20cee54e173141ccb6f3452f69ca2942.txt

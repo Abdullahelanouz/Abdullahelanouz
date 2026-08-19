@@ -1,0 +1,37 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="300" fill="url(#bg)" rx="20"/>
+  
+  <!-- Profile Circle -->
+  <circle cx="150" cy="120" r="60" fill="url(#face)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Eyes -->
+  <circle cx="135" cy="110" r="6" fill="#1f2937"/>
+  <circle cx="165" cy="110" r="6" fill="#1f2937"/>
+  
+  <!-- Nose -->
+  <ellipse cx="150" cy="125" rx="3" ry="2" fill="#f59e0b"/>
+  
+  <!-- Smile -->
+  <path d="M 130 140 Q 150 155 170 140" stroke="#1f2937" stroke-width="3" fill="none"/>
+  
+  <!-- Body -->
+  <rect x="100" y="180" width="100" height="80" fill="#ffffff" rx="10"/>
+  
+  <!-- Shirt details -->
+  <rect x="120" y="190" width="60" height="60" fill="#3b82f6" rx="5"/>
+  
+  <!-- Name text -->
+  <text x="150" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">عبدالله العنوز</text>
+</svg>

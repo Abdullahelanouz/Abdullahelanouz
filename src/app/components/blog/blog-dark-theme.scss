@@ -1,0 +1,256 @@
+// Dark Theme Support for Blog Component
+[data-theme="dark"] .blog-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  
+  .section-header {
+    .section-title {
+      color: #f1f5f9;
+    }
+    
+    .section-subtitle {
+      color: #94a3b8;
+    }
+  }
+  
+  .featured-post {
+    background: #1e293b;
+    border: 1px solid #334155;
+    
+    .featured-content {
+      .post-meta {
+        color: #94a3b8;
+      }
+      
+      .post-title a {
+        color: #f1f5f9;
+        
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+      
+      .post-excerpt {
+        color: #94a3b8;
+      }
+      
+      .post-tags .tag {
+        background: #334155;
+        color: #cbd5e1;
+      }
+      
+      .read-more-btn {
+        color: #3b82f6;
+        
+        &:hover {
+          color: #60a5fa;
+        }
+      }
+    }
+  }
+  
+  .blog-post-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    
+    &:hover {
+      border-color: #475569;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+    
+    .post-content {
+      .post-meta {
+        color: #94a3b8;
+      }
+      
+      .post-title a {
+        color: #f1f5f9;
+        
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+      
+      .post-excerpt {
+        color: #94a3b8;
+      }
+      
+      .post-tags .tag {
+        background: #334155;
+        color: #cbd5e1;
+      }
+      
+      .read-more-link {
+        color: #3b82f6;
+        
+        &:hover {
+          color: #60a5fa;
+        }
+      }
+    }
+  }
+  
+  .newsletter-section {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border: 1px solid #334155;
+    
+    .newsletter-content {
+      h3 {
+        color: #f1f5f9;
+      }
+      
+      p {
+        color: #94a3b8;
+      }
+      
+      .newsletter-form {
+        .form-group {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid #334155;
+          
+          .email-input {
+            color: #f1f5f9;
+            
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+          
+          .subscribe-btn {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            
+            &:hover:not(:disabled) {
+              box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Light Theme Support for Blog Component
+[data-theme="light"] .blog-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  
+  .section-header {
+    .section-title {
+      color: #1e293b;
+    }
+    
+    .section-subtitle {
+      color: #64748b;
+    }
+  }
+  
+  .featured-post {
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    
+    .featured-content {
+      .post-meta {
+        color: #64748b;
+      }
+      
+      .post-title a {
+        color: #1e293b;
+        
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+      
+      .post-excerpt {
+        color: #64748b;
+      }
+      
+      .post-tags .tag {
+        background: #f1f5f9;
+        color: #475569;
+      }
+      
+      .read-more-btn {
+        color: #3b82f6;
+        
+        &:hover {
+          color: #1d4ed8;
+        }
+      }
+    }
+  }
+  
+  .blog-post-card {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .post-content {
+      .post-meta {
+        color: #64748b;
+      }
+      
+      .post-title a {
+        color: #1e293b;
+        
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+      
+      .post-excerpt {
+        color: #64748b;
+      }
+      
+      .post-tags .tag {
+        background: #f1f5f9;
+        color: #475569;
+      }
+      
+      .read-more-link {
+        color: #3b82f6;
+        
+        &:hover {
+          color: #1d4ed8;
+        }
+      }
+    }
+  }
+  
+  .newsletter-section {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    
+    .newsletter-content {
+      h3 {
+        color: white;
+      }
+      
+      p {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      
+      .newsletter-form {
+        .form-group {
+          background: rgba(255, 255, 255, 0.1);
+          
+          .email-input {
+            color: white;
+            
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.7);
+            }
+          }
+          
+          .subscribe-btn {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            
+            &:hover:not(:disabled) {
+              box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

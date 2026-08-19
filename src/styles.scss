@@ -1,0 +1,359 @@
+/* Global Styles for Portfolio Website */
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+// CSS Variables for Theming
+:root {
+  // Light Theme Colors
+  --primary-color: #2563eb;
+  --primary-color-rgb: 37, 99, 235;
+  --accent-color: #7c3aed;
+  --accent-color-rgb: 124, 58, 237;
+  --bg-color: #ffffff;
+  --bg-color-rgb: 255, 255, 255;
+  --bg-secondary: #f8fafc;
+  --bg-secondary-rgb: 248, 250, 252;
+  --text-color: #1e293b;
+  --text-color-rgb: 30, 41, 59;
+  --text-secondary: #64748b;
+  --text-secondary-rgb: 100, 116, 139;
+  --border-color: #e2e8f0;
+  --border-color-rgb: 226, 232, 240;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+// Dark Theme Colors
+[data-theme="dark"] {
+  --primary-color: #3b82f6;
+  --primary-color-rgb: 59, 130, 246;
+  --accent-color: #8b5cf6;
+  --accent-color-rgb: 139, 92, 246;
+  --bg-color: #0f172a;
+  --bg-color-rgb: 15, 23, 42;
+  --bg-secondary: #1e293b;
+  --bg-secondary-rgb: 30, 41, 59;
+  --text-color: #f1f5f9;
+  --text-color-rgb: 241, 245, 249;
+  --text-secondary: #94a3b8;
+  --text-secondary-rgb: 148, 163, 184;
+  --border-color: #334155;
+  --border-color-rgb: 51, 65, 85;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+}
+
+// Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+// Utility Classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  gap: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(var(--primary-color-rgb), 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+
+    &:hover {
+      box-shadow: 0 8px 25px rgba(var(--primary-color-rgb), 0.4);
+    }
+  }
+
+  &.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+  }
+
+  &.btn-outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid rgba(var(--border-color-rgb), 0.5);
+
+    &:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+  }
+}
+
+// Card Styles
+.card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(var(--shadow-color), 0.1);
+  border: 1px solid rgba(var(--border-color-rgb), 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(var(--shadow-color), 0.15);
+  }
+}
+
+// Animation Classes
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// RTL Support
+[dir="rtl"] {
+  .slide-in-left {
+    transform: translateX(50px);
+  }
+
+  .slide-in-right {
+    transform: translateX(-50px);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+// Mobile S (<= 320px) fine-tuning
+@media (max-width: 320px) {
+  html {
+    font-size: 15px; // slightly smaller base font to fit more content
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  /* Header compact mode */
+  .nav-container {
+    height: 60px;
+  }
+  .nav-menu {
+    top: 60px;
+  }
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  .mobile-menu-toggle .hamburger-line {
+    width: 22px;
+  }
+
+  /* Tighten grids and cards */
+  .skills-grid {
+    gap: 0.75rem;
+  }
+  .skill-item {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  .courses-grid {
+    gap: 1rem;
+  }
+  .course-card .course-content {
+    padding: 1.25rem;
+  }
+
+  /* About image size to avoid overflow */
+  .about-visual .about-image {
+    width: 260px;
+    height: 340px;
+  }
+}
